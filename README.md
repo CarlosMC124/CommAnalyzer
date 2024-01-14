@@ -34,10 +34,11 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">- README CommAnalyzer -</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Is an integrated test and analysis tool for transmission protocols for telecontrol systems. This tool enables the development, testing and operation of stations using the transmission protocols IEC 60870-5-101, -102, -103, -104, IEC 61850, DNP3/IEEE 1815 serial, 
+    DNP3/IEEE 1815 over LAN/WAN, MODBUS serial, MODBUS TCP/IP, ABB RP570/571, ABB SPA-Bus and L&G TG 809.
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
