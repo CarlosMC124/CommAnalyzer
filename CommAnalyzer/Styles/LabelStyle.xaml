@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--#region Style Label-->
+    <Style TargetType="Label">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}" />
+    </Style>
+    <!--#endregion-->
+
+</ResourceDictionary>

@@ -1,0 +1,229 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Start: ProButtonStyle -->
+    <Style x:Key="ProButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{DynamicResource TertiaryWhiteColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBlackColor}"/>
+        <Setter Property="FontWeight" Value="600"/>
+        <Setter Property="Padding" Value="12 6"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="btnBorder" CornerRadius="20"
+                              Background="{TemplateBinding Background}"
+                              Width="{TemplateBinding Width}"
+                              
+                              BorderThickness="{TemplateBinding BorderThickness}"
+                              SnapsToDevicePixels="True"
+                              Padding="{TemplateBinding Padding}">
+                        <ContentPresenter x:Name="ContentPresenter" Focusable="False"
+                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            Margin="{TemplateBinding Padding}"
+                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                            RecognizesAccessKey="True"/>
+                        <!--<Border.Effect>
+                              <DropShadowEffect ShadowDepth=".5" Direction="0"
+                                                Opacity=".3"/>
+                          </Border.Effect>-->
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="btnBorder" Property="CornerRadius" Value="21"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- End: ProButtonStyle -->
+
+    <!-- Start: ProButtonStyle2 -->
+    <Style x:Key="ProButtonStyle2" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{DynamicResource SecundaryBackgroundColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}"/>
+        <Setter Property="Padding" Value="12 6"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="btnBorder" CornerRadius="5"
+                              Background="{TemplateBinding Background}"
+                              Width="{TemplateBinding Width}"
+                              
+                              BorderThickness="{TemplateBinding BorderThickness}"
+                              SnapsToDevicePixels="True"
+                              Padding="{TemplateBinding Padding}">
+                        <ContentPresenter x:Name="ContentPresenter" Focusable="False"
+                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                            Margin="{TemplateBinding Padding}"
+                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                            RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="btnBorder" Property="Background" Value="{DynamicResource PrimaryBackgroundColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="btnBorder" Property="CornerRadius" Value="5"/>
+                            <Setter TargetName="btnBorder" Property="Background" Value="{DynamicResource PrimaryBackgroundColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource PrimaryBackgroundColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- End: ProButtonStyle -->
+
+    <!-- Start: Button | Minimize | Maximize | Close -->
+    <Style x:Key="IconButtonsStyle" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="bd" CornerRadius="5" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Path Name="ico" Data="{TemplateBinding Content}"
+                            Fill="{DynamicResource PrimaryTextColor}" Height="10" Width="10" Stretch="Uniform"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource SecundaryBackgroundColor}"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                                <Condition Property="Tag" Value="IsCloseButton"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="#F72626"/>
+                            <Setter TargetName="ico" Property="Fill" Value="#FFFFFF"/>
+                        </MultiTrigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <!--<Setter TargetName="ico" Property="Fill" Value="{DynamicResource TertiaryTextColor}"/>-->
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- End: Button | Minimize | Maximize | Close -->
+
+    <!-- Start: Update -->
+    <Style x:Key="IconButtonsStyle2" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{DynamicResource SecundaryBackgroundColor}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource PrimaryBackgroundColor}"/>
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Width" Value="35"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Name="bd" CornerRadius="5" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                        <Path Name="ico" Data="{TemplateBinding Content}"
+                            Fill="{DynamicResource PrimaryTextColor}" Height="12" Width="12" Stretch="Uniform"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource SecundaryBackgroundColor}"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                                <Condition Property="Tag" Value="IsCloseButton"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="#F72626"/>
+                            <Setter TargetName="ico" Property="Fill" Value="#FFFFFF"/>
+                        </MultiTrigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource PrimaryBackgroundColor}"/>
+                            <!--<Setter TargetName="ico" Property="Fill" Value="{DynamicResource PrimaryBackgroundColor}"/>-->
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- End: Update -->
+
+    <!-- MenuButtonStyle -->
+    <Style x:Key="MenuButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryTextColor}"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="menuButton"
+                              Background="Transparent"
+                              BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="24"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Selected  -->
+                            <Border x:Name="btnSelected"
+                                      Grid.ColumnSpan="2"
+                                      CornerRadius="4" Background="{DynamicResource SecundaryBackgroundColor}"
+                                      Width="{TemplateBinding Width}" HorizontalAlignment="Center">
+                            </Border>
+
+
+                            <!-- Icon -->
+                            <Path x:Name="Icon" Data="{Binding Tag,
+                                    RelativeSource={RelativeSource AncestorType={x:Type Button}}}"
+                                    Height="18" Width="18"
+                                    Stretch="Uniform" Fill="{DynamicResource PrimaryTextColor}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 0"/>
+
+                            <!-- Text -->
+                            <TextBlock x:Name="txtName" HorizontalAlignment="Left"
+                                         VerticalAlignment="Center" Margin="0 0 0 0"
+                                         Grid.Column="1" Text="{TemplateBinding Content}"
+                                         Foreground="{TemplateBinding Foreground}"
+                                         FontWeight="{TemplateBinding FontWeight}"
+                                         FontSize="{TemplateBinding FontSize}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource SecundaryTextColor}"/>
+                            <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource SecundaryTextColor}"/>
+                            <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource PrimaryBackgroundColor}"/>
+                        </Trigger>
+                        <!--<Trigger Property="IsChecked" Value="True">
+                          <Setter TargetName="Icon" Property="Fill" Value="{DynamicResource TertiaryTextColor}"/>
+                          <Setter TargetName="Indicator" Property="Fill" Value="{DynamicResource SecundaryBlueColor}"/>
+                          <Setter TargetName="btnSelected" Property="Background" Value="{DynamicResource TertiaryBackgroundColor}"/>
+                          <Setter TargetName="txtName" Property="Foreground" Value="{DynamicResource TertiaryTextColor}"/>
+                      </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- End: MenuButtonStyle -->
+</ResourceDictionary>
