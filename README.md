@@ -37,8 +37,8 @@
   <h3 align="center">- README CommAnalyzer -</h3>
 
   <p align="center">
-    Is an integrated test and analysis tool for transmission protocols for telecontrol systems. This tool enables the development, testing and operation of stations using the transmission protocols IEC 60870-5-101, -102, -103, -104, IEC 61850, DNP3/IEEE 1815 serial, 
-    DNP3/IEEE 1815 over LAN/WAN, MODBUS serial, MODBUS TCP/IP, ABB RP570/571, ABB SPA-Bus and L&G TG 809.
+    An analyzer tool for transmission protocols for telecontrol systems, using the transmission protocols IEC 60870-5-101, -104, IEC 61850, DNP3/IEEE 1815 serial, 
+    DNP3/IEEE 1815 over LAN/WAN, MODBUS serial, MODBUS TCP/IP.
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
@@ -241,15 +241,15 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/carlosMC124/CommAnalyzer.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/carlosMC124/CommAnalyzer/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/carlosMC124/CommAnalyzer.svg?style=for-the-badge
 [forks-url]: https://github.com/carlosMC124/CommAnalyzer/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[stars-shield]: https://img.shields.io/github/stars/carlosMC124/CommAnalyzer.svg?style=for-the-badge
+[stars-url]: https://github.com/carlosMC124/CommAnalyzer/stargazers
+[issues-shield]: https://img.shields.io/github/issues/carlosMC124/CommAnalyzer.svg?style=for-the-badge
+[issues-url]: https://github.com/carlosMC124/CommAnalyzer/issues
+[license-shield]: https://img.shields.io/github/license/carlosMC124/CommAnalyzer?style=for-the-badge
+[license-url]: https://github.com/carlosMC124/CommAnalyzer/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
